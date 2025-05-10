@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍길동 - 개인 포트폴리오</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><i class="fas fa-code" style="margin-right:8px;"></i>홍길동</div>
+                <ul class="nav-links">
+                    <li><a href="#home"><i class="fas fa-home" style="margin-right:5px;"></i>홈</a></li>
+                    <li><a href="#about"><i class="fas fa-user" style="margin-right:5px;"></i>소개</a></li>
+                    <li><a href="#skills"><i class="fas fa-laptop-code" style="margin-right:5px;"></i>기술</a></li>
+                    <li><a href="#portfolio"><i class="fas fa-briefcase" style="margin-right:5px;"></i>포트폴리오</a></li>
+                    <li><a href="#experience"><i class="fas fa-history" style="margin-right:5px;"></i>경력</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope" style="margin-right:5px;"></i>연락처</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-element">
+                <div class="hero-text">
+                    <span class="pre-heading">안녕하세요!</span>
+                    <h1>저는 <span class="highlight">홍길동</span>입니다</h1>
+                    <p><span class="typed-text"></span><span class="cursor"> </span></p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn"><i class="fas fa-paper-plane" style="margin-right:8px;"></i>연락하기</a>
+                        <a href="#portfolio" class="btn btn-outline"><i class="fas fa-eye" style="margin-right:8px;"></i>작업 보기</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-text">프로젝트</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-text">클라이언트</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="profile-img.jpg" alt="홍길동의 프로필 이미지">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container full-height">
+            <div class="section-title fade-element">
+                <h2>자기 소개</h2>
+                <p>사용자 중심 해결책을 만들기 위해 노력합니다</p>
+            </div>
+            <div class="about-content fade-element">
+                <div class="about-image">
+                    <img src="introduce-img.jpg" alt="소개 이미지">
+                </div>
+                <div class="about-text">
+                    <p>안녕하세요! 저는 사용자 중심 디자인과 최신 웹 기술을 접목하여 혁신적인 디지털 경험을 만들어 내고 있습니다.</p>
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <div class="about-card-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h3>문제 해결 능력</h3>
+                            <p>복잡한 문제를 분석하고 효율적인 해결책을 만들어 낼 수 있습니다.</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-icon"><i class="fas fa-code"></i></div>
+                            <h3>기술적 전문성</h3>
+                            <p>프론트엔드와 백엔드 기술을 두루 다루며 최신 방법론을 적용합니다.</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-icon"><i class="fas fa-users"></i></div>
+                            <h3>협업 능력</h3>
+                            <p>다양한 분야의 전문가와 협력하여 최상의 결과물을 제공합니다.</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn">지금 연락하기 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-title fade-element">
+                <h2>기술 및 역량</h2>
+                <p>다양한 기술을 활용하여 최상의 결과물 제공</p>
+            </div>
+            <div class="skills-wrapper">
+                <div class="skills-categories">
+                    <button class="skill-cat-btn active" data-category="all">전체 보기</button>
+                    <button class="skill-cat-btn" data-category="frontend">프론트엔드</button>
+                    <button class="skill-cat-btn" data-category="backend">백엔드</button>
+                    <button class="skill-cat-btn" data-category="design">UI/UX 디자인</button>
+                    <button class="skill-cat-btn" data-category="etc">기타</button>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-card fade-element" data-category="frontend">
+                        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                        <h3>프론트엔드 개발</h3>
+                        <p>HTML5, CSS3, JavaScript(ES6+), React.js, Vue.js, Next.js를 활용한 반응형 웹 애플리케이션 개발</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-card fade-element" data-category="backend">
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                        <h3>백엔드 개발</h3>
+                        <p>Node.js, Express, MongoDB, MySQL을 사용한 서버 사이드 개발</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-card fade-element" data-category="design">
+                        <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3>UI/UX 디자인</h3>
+                        <p>Figma, Adobe XD를 활용한 사용자 중심 인터페이스 설계</p>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title fade-element">
+                <h2>포트폴리오</h2>
+                <p>제가 진행한 다양한 프로젝트를 소개합니다</p>
+            </div>
+            <div class="projects">
+                <div class="project-card fade-element" data-category="web">
+                    <div class="project-img">
+                        <img src="project1-img.jpg" alt="프로젝트 1">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Web Development</span>
+                        <h3><i class="fas fa-shopping-cart" style="color:#3a86ff;margin-right:8px;"></i>온라인 쇼핑몰</h3>
+                        <p>React와 Node.js를 활용한 반응형 이커머스 웹사이트 개발. 사용자 인증, 상품 검색, 장바구니 기능 구현.</p>
+                        <div class="project-techs">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Redux</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> 라이브 데모</a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> 소스 코드</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-element" data-category="app">
+                    <div class="project-img">
+                        <img src="project2-img.jpg" alt="프로젝트 2">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">App Development</span>
+                        <h3><i class="fas fa-mobile-alt" style="color:#3a86ff;margin-right:8px;"></i>모바일 앱</h3>
+                        <p>React Native를 사용한 크로스 플랫폼 모바일 애플리케이션 개발.</p>
+                        <div class="project-techs">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> 라이브 데모</a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> 소스 코드</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-title fade-element">
+                <h2>경력 및 학력</h2>
+                <p>저의 전문적인 여정과 경험을 소개합니다</p>
+            </div>
+            <div class="experience-tabs">
+                <button class="exp-tab active" data-tab="work">주요 경력</button>
+                <button class="exp-tab" data-tab="education">학력 및 자격증</button>
+            </div>
+            <div class="experience-content active" id="work-content">
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content fade-element">
+                            <h3>시니어 웹 개발자</h3>
+                            <p>2020 - 현재 | ABC 테크</p>
+                            <p>프론트엔드 및 백엔드 개발 리드, 팀 관리</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content fade-element">
+                            <h3>주니어 웹 개발자</h3>
+                            <p>2018 - 2020 | XYZ 소프트</p>
+                            <p>React 기반 웹 애플리케이션 개발</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-content" id="education-content">
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content fade-element">
+                            <h3>인공지능 기계학습 과정</h3>
+                            <p>2022 | 한국인공지능아카데미</p>
+                            <p>데이터 사이언스와 딥러닝 기술 중심 교육 수료</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content fade-element">
+                            <h3>컴퓨터공학 학사</h3>
+                            <p>2014 - 2018 | 서울대학교</p>
+                            <p>GPA: 3.8/4.0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title fade-element">
+                <h2>연락처</h2>
+                <p>프로젝트 제안이나 문의사항은 언제든지 연락해 주세요</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle"><i class="fas fa-map-marker-alt"></i> 연락하세요</h3>
+                    <p class="contact-text">프로젝트 제안, 협업 문의, 구인 관련 문의 등 언제든지 연락해 주세요.</p>
+                    <div class="contact-items">
+                        <div class="contact-item fade-element">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>이메일</h4>
+                                <p>hong@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-element">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>전화</h4>
+                                <p>+82 10-1234-5678</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h3 class="contact-subtitle"><i class="fas fa-share-alt"></i> 소셜 미디어</h3>
+                        <div class="social-icons">
+                            <a href="#" class="contact-item fade-element"><i class="fab fa-github"></i></a>
+                            <a href="#" class="contact-item fade-element"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" class="form-card">
+                        <div class="form-group">
+                            <label for="name">이름</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">이메일</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">메시지</label>
+                            <textarea id="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">메시지 보내기 <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+</body>
+</html>
