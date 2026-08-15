@@ -105,9 +105,17 @@ a{color:inherit}
   padding:7px 14px; transition:border-color .2s var(--ease), background .2s var(--ease);
 }
 .nav-cta:hover{border-color:var(--accent); background:var(--accent-soft)}
-@media (max-width:860px){
-  .nav-links a:not(.nav-cta){display:none}
+.nav-resume{color:var(--text) !important; font-weight:500}
+.nav-resume:hover{color:var(--accent) !important}
+/* Section anchors collapse on small screens, but Resume and contact are the two
+   actions a recruiter came for, so both survive down to the narrowest viewport. */
+@media (max-width:960px){
+  .nav-links a:not(.nav-cta):not(.nav-resume){display:none}
+  .nav-links{gap:20px}
+}
+@media (max-width:420px){
   .brand-name{display:none}
+  .nav-links{gap:14px}
 }
 
 /* ---------- hero ---------- */
@@ -317,6 +325,7 @@ h1{
 }
 @media (min-width:820px){ .foot-in{grid-template-columns:1.6fr 1fr} }
 .foot-lead p{margin:14px 0 26px; max-width:52ch; color:var(--muted)}
+.foot-lead .cta-row{margin-top:0}
 .foot-links{display:flex; flex-direction:column; gap:12px; font-size:15px}
 @media (min-width:820px){ .foot-links{align-items:flex-end} }
 .foot-links a{text-decoration:none; color:var(--muted); transition:color .2s var(--ease)}

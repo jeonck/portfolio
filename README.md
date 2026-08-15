@@ -12,6 +12,7 @@ No build step, no dependencies. Three files do the work:
 | `index.html` | All content and structured data (schema.org `Person`) |
 | `styles.css` | Design tokens, layout, light and dark themes |
 | `CNAME` | Custom domain binding for GitHub Pages |
+| `resume-source.html` | Print stylesheet that renders `CK-Jeon-Resume.pdf` |
 
 Assets: `fonts/` holds the self-hosted Geist variable fonts (SIL OFL), and
 `img/` holds real screenshots of the live sites plus the social card.
@@ -35,6 +36,19 @@ Then open http://localhost:4321.
   1100px wide, and encoded as WebP at quality 76.
 - **Accent colour** is a single token, `--accent`, defined once per theme in
   `styles.css`. Change it there and the whole page follows.
+
+## Regenerating the resume PDF
+
+Edit `resume-source.html`, then re-render. It is tuned to land on exactly two
+Letter pages; if content grows, adjust `line-height` and `@page` margins rather
+than cutting bullets.
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --no-pdf-header-footer --allow-file-access-from-files --virtual-time-budget=8000 --print-to-pdf=CK-Jeon-Resume.pdf resume-source.html
+```
+
+The PDF deliberately omits the phone number, matching the site. Add it to the
+`.contact` block in `resume-source.html` if a given application needs it.
 
 ## Regenerating a screenshot
 

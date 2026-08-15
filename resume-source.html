@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CK Jeon Resume</title>
+<style>
+@font-face{font-family:"Geist";src:url("fonts/Geist.woff2") format("woff2-variations");font-weight:100 900}
+@font-face{font-family:"Geist Mono";src:url("fonts/GeistMono.woff2") format("woff2-variations");font-weight:100 900}
+
+@page{ size:Letter; margin:11mm 13mm; }
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Geist",-apple-system,sans-serif;
+  font-size:8.9pt; line-height:1.33; color:#1a1c1f;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:#0a6e52; text-decoration:none}
+
+/* header */
+.name{font-size:20pt; font-weight:600; letter-spacing:-.025em; line-height:1.05}
+.role{font-size:10.2pt; color:#0a6e52; font-weight:500; margin-top:3pt}
+.contact{
+  font-family:"Geist Mono",monospace; font-size:8pt; color:#54595f;
+  margin-top:7pt; letter-spacing:.005em;
+}
+.contact span{white-space:nowrap}
+.sep{color:#b9bdc1; padding:0 5pt}
+.rule{height:2.2pt; background:#0a6e52; margin:9pt 0 0}
+
+/* sections */
+h2{
+  font-size:7.9pt; font-weight:600; text-transform:uppercase; letter-spacing:.11em;
+  color:#0a6e52; margin:10pt 0 5pt; padding-bottom:2.5pt;
+  border-bottom:.6pt solid #dfe1e3;
+}
+p.summary{text-align:justify}
+
+/* skills */
+.skill-row{display:flex; gap:8pt; margin-bottom:3pt; break-inside:avoid}
+.skill-key{width:118pt; flex:none; font-weight:600; font-size:8.8pt; color:#2b2e32}
+.skill-val{flex:1; color:#3f444a; font-size:9pt}
+
+/* jobs */
+.job{margin-bottom:7pt; break-inside:avoid}
+.job-head{display:flex; justify-content:space-between; align-items:baseline; gap:12pt}
+.job-title{font-size:9.6pt; font-weight:600; letter-spacing:-.012em}
+.job-when{
+  font-family:"Geist Mono",monospace; font-size:7.8pt; color:#6a6f75;
+  white-space:nowrap; flex:none;
+}
+.job-org{font-size:8.8pt; color:#0a6e52; margin:1.5pt 0 4pt}
+ul{list-style:none; margin:0}
+li{position:relative; padding-left:8pt; margin-bottom:1.6pt; color:#3f444a}
+li::before{
+  content:""; position:absolute; left:0; top:5.2pt;
+  width:2.6pt; height:2.6pt; border-radius:50%; background:#b3b8bd;
+}
+
+/* projects */
+.proj{margin-bottom:4.5pt; break-inside:avoid}
+.proj-name{font-weight:600; color:#2b2e32}
+.proj p{display:inline; color:#3f444a}
+
+/* footer blocks */
+.two{display:flex; gap:26pt}
+.two > div{flex:1}
+.cred{margin-bottom:3pt; color:#3f444a}
+.cred strong{color:#2b2e32; font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="name">CHANG KOOK JEON</div>
+<div class="role">Platform Engineering &amp; Cloud Infrastructure Leader</div>
+<div class="contact">
+  <span>jeonck2000@gmail.com</span><span class="sep">/</span><span>Austin, TX</span><span class="sep">/</span><span>U.S. Permanent Resident, no sponsorship required</span><br>
+  <span>jeonck.metacog.co.kr</span><span class="sep">/</span><span>linkedin.com/in/metacog</span><span class="sep">/</span><span>github.com/jeonck</span>
+</div>
+<div class="rule"></div>
+
+<h2>Summary</h2>
+<p class="summary">Platform Engineering and Cloud Infrastructure leader with 12+ years designing, building, and operating cloud-native platforms across telecommunications, government, and enterprise environments. Proven expertise developing Kubernetes-based platforms, Internal Developer Platforms (IDP), self-service engineering capabilities, Infrastructure as Code, GitOps automation, Site Reliability Engineering, and AI-enabled infrastructure. Experienced building developer-focused platforms that accelerate software delivery through automation, reusable platform services, observability, and standardized deployment patterns. Strong background in AWS, Azure, Kubernetes, Terraform, Python automation, CI/CD modernization, and large-scale distributed systems supporting mission-critical workloads.</p>
+
+<h2>Core Skills</h2>
+<div class="skill-row">
+  <div class="skill-key">Platform Engineering</div>
+  <div class="skill-val">Kubernetes platform engineering, platform automation, Internal Developer Platforms, engineering enablement, service reliability</div>
+</div>
+<div class="skill-row">
+  <div class="skill-key">Cloud Native</div>
+  <div class="skill-val">Kubernetes, Docker, AWS, Azure, hybrid cloud, Terraform, Infrastructure as Code, GitOps, Argo CD, distributed systems, multi-region architectures</div>
+</div>
+<div class="skill-row">
+  <div class="skill-key">AI &amp; Developer Platform</div>
+  <div class="skill-val">LLM infrastructure, AI platform enablement, GPU infrastructure, containerized AI workloads, Jupyter platforms, FastAPI, Streamlit, AI-assisted engineering workflows</div>
+</div>
+<div class="skill-row">
+  <div class="skill-key">Automation &amp; Reliability</div>
+  <div class="skill-val">Python automation, CI/CD pipelines, GitLab CI/CD, GitHub Actions, Jenkins, incident response, root cause analysis</div>
+</div>
+<div class="skill-row">
+  <div class="skill-key">Observability</div>
+  <div class="skill-val">Datadog, Prometheus, Grafana, OpenSearch, EFK stack, performance monitoring, reliability engineering</div>
+</div>
+
+<h2>Work Experience</h2>
+
+<div class="job">
+  <div class="job-head">
+    <div class="job-title">Cloud Infrastructure Specialist &amp; Senior Information Systems Auditor</div>
+    <div class="job-when">Nov 2025 - Apr 2026</div>
+  </div>
+  <div class="job-org">Camino, Seoul, South Korea</div>
+  <ul>
+    <li>Led cloud infrastructure assessments and governance initiatives for government cloud-native environments, evaluating security posture, platform readiness, compliance, and operational risk.</li>
+    <li>Evaluated platform readiness, security controls, operational maturity, and compliance requirements across cloud environments.</li>
+    <li>Developed Python-based automation tools for infrastructure diagnostics, operational analysis, and platform troubleshooting.</li>
+    <li>Supported cloud modernization initiatives through architecture reviews, automation improvements, and technical risk reduction.</li>
+    <li>Partnered with engineering, security, and compliance teams to establish cloud governance standards and improve reliability across enterprise platforms.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head">
+    <div class="job-title">DevOps Engineer &amp; SRE Lead</div>
+    <div class="job-when">Jan 2018 - Oct 2025</div>
+  </div>
+  <div class="job-org">SK Telecom, Seoul, South Korea</div>
+  <ul>
+    <li>Managed enterprise-scale Azure and hybrid cloud infrastructure supporting mission-critical telecommunications platforms while maintaining 99.99% availability through SRE practices, automation, and proactive reliability engineering.</li>
+    <li>Architected and operated Kubernetes-based cloud-native platforms supporting distributed enterprise workloads.</li>
+    <li>Standardized Infrastructure as Code practices using Terraform, Kubernetes manifests, and automated provisioning to improve deployment consistency and scalability.</li>
+    <li>Led modernization of seven enterprise CI/CD pipelines utilizing GitLab, GitOps methodologies, and deployment automation.</li>
+    <li>Developed Python automation solutions that reduced manual operational effort and improved engineering productivity.</li>
+    <li>Implemented enterprise observability using Datadog, Prometheus, Grafana, and OpenSearch to improve monitoring and incident response.</li>
+    <li>Directed cloud optimization initiatives utilizing FinOps principles to improve resource utilization and operational efficiency.</li>
+    <li>Partnered with engineering and product teams to improve developer experience through self-service deployment workflows and platform enhancements.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head">
+    <div class="job-title">Corporate QA TF Lead &amp; Senior Infrastructure Strategist</div>
+    <div class="job-when">Jan 2014 - Dec 2017</div>
+  </div>
+  <div class="job-org">SK Telecom, Seoul, South Korea</div>
+  <ul>
+    <li>Led enterprise platform readiness initiatives, including performance, stress, and endurance testing for large-scale distributed systems.</li>
+    <li>Designed production-equivalent test environments to validate scalability, reliability, and operational readiness before deployment.</li>
+    <li>Coordinated engineering, infrastructure, and product organizations to streamline deployment planning and improve enterprise service delivery.</li>
+    <li>Developed operational procedures, runbooks, and validation frameworks that reduced post-deployment incidents and improved service reliability.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head">
+    <div class="job-title">Infrastructure Operations Specialist, High-Availability Systems</div>
+    <div class="job-when">Jan 2009 - Dec 2013</div>
+  </div>
+  <div class="job-org">SK Telecom, Seoul, South Korea</div>
+  <ul>
+    <li>Managed 24x7 enterprise Linux infrastructure supporting mission-critical telecommunications platforms serving millions of subscribers.</li>
+    <li>Led major incident response activities, troubleshooting production system failures and restoring critical services while minimizing downtime.</li>
+    <li>Coordinated cross-functional teams during more than thirty enterprise infrastructure incidents, improving operational response and platform resilience.</li>
+    <li>Supported business continuity, high availability, disaster recovery, and operational governance initiatives across enterprise infrastructure.</li>
+  </ul>
+</div>
+
+<h2>Platform Engineering Projects</h2>
+<div class="proj"><span class="proj-name">Internal Developer Platform (self-service).</span> <p>Designed self-service deployment workflows on Kubernetes using GitOps (Argo CD) and templated pipelines, enabling product teams to provision namespaces, pipelines, and observability without platform-team tickets.</p></div>
+<div class="proj"><span class="proj-name">Terraform IaC module library.</span> <p>Authored and published reusable Terraform modules for AWS network, compute, and Kubernetes provisioning, standardizing environment build-out and reducing new-environment setup from days to hours.</p></div>
+<div class="proj"><span class="proj-name">CI/CD automation pipeline.</span> <p>Built an end-to-end delivery pipeline with GitLab CI running self-hosted runners on Kubernetes for elastic, isolated build capacity, and Argo CD for GitOps-based continuous delivery. Containerized FastAPI and Spring Boot services using Jib to build images directly from the Gradle and Maven build, removing privileged builds from the cluster and shortening image build times.</p></div>
+<div class="proj"><span class="proj-name">AI/LLM infrastructure platform.</span> <p>Deployed GPU-backed containerized LLM and Jupyter workloads on Kubernetes with FastAPI and Streamlit service endpoints, supporting AI-assisted engineering workflows and internal developer productivity tooling.</p></div>
+<div class="proj"><span class="proj-name">Technical writing.</span> <p>Publish platform engineering, SRE, and AI infrastructure practice notes at devops.metacog.co.kr and fw-thinking.metacog.co.kr, documenting hands-on experiments and architecture decisions. Also run comparison.metacog.co.kr and comp-thinking.metacog.co.kr.</p></div>
+
+<div class="two">
+  <div>
+    <h2>Education</h2>
+    <div class="cred"><strong>MBA, Technology Management</strong><br>Hanyang University, Seoul, South Korea</div>
+    <div class="cred"><strong>BS, Electronics Engineering</strong><br>Kyungpook National University, Daegu, South Korea</div>
+  </div>
+  <div>
+    <h2>Certifications</h2>
+    <div class="cred">AWS Certified Solutions Architect</div>
+    <div class="cred">Professional Engineer in Information Technology</div>
+    <div class="cred">Senior Information Systems Auditor</div>
+    <div class="cred">CCNP (Networking), RHCSA (Linux), ISTQB</div>
+  </div>
+</div>
+
+</body>
+</html>
