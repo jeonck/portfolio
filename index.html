@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CK Jeon, Platform Engineering &amp; Cloud Infrastructure</title>
+<meta name="description" content="CK Jeon (Chang Kook Jeon), platform engineering and cloud infrastructure leader in Austin, TX. 12+ years building Kubernetes platforms, Internal Developer Platforms, Terraform IaC, and GitOps delivery for telecom, government, and enterprise workloads.">
+<link rel="canonical" href="https://jeonck.metacog.co.kr/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jeonck.metacog.co.kr/">
+<meta property="og:title" content="CK Jeon, Platform Engineering &amp; Cloud Infrastructure">
+<meta property="og:description" content="12+ years building Kubernetes platforms, Internal Developer Platforms, Terraform IaC, and GitOps delivery for telecom, government, and enterprise workloads.">
+<meta property="og:image" content="https://jeonck.metacog.co.kr/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Chang Kook Jeon",
+  "alternateName": "CK Jeon",
+  "url": "https://jeonck.metacog.co.kr/",
+  "email": "mailto:jeonck2000@gmail.com",
+  "jobTitle": "Platform Engineering and Cloud Infrastructure Leader",
+  "address": { "@type": "PostalAddress", "addressLocality": "Austin", "addressRegion": "TX", "addressCountry": "US" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Hanyang University" },
+    { "@type": "CollegeOrUniversity", "name": "Kyungpook National University" }
+  ],
+  "knowsAbout": ["Kubernetes","Platform Engineering","Terraform","GitOps","Site Reliability Engineering","AWS","Azure","CI/CD","Observability"],
+  "sameAs": ["https://github.com/jeonck","https://www.linkedin.com/in/metacog/"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">CK</span>
+      <span class="brand-name">CK Jeon</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#experience">Experience</a>
+      <a href="#stack">Stack</a>
+      <a class="nav-cta" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 1. HERO : asymmetric split -->
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow">Austin, TX · U.S. Permanent Resident, no sponsorship required</p>
+      <h1>I build the platforms<br>other engineers ship on.</h1>
+      <p class="lede">12+ years running Kubernetes, Terraform, and GitOps platforms for telecom, government, and enterprise workloads.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#work">View selected work</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <a class="shot shot-lg" href="https://rel-mgmt.metacog.co.kr/" target="_blank" rel="noopener">
+        <img src="/img/relmgmt.webp" width="1100" height="688" alt="Release Board, a dashboard tracking 99 DevOps products with Go, Hold, and NoGo verdicts, built and operated by CK Jeon" fetchpriority="high" decoding="async">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 2. METRICS : hairline column strip, no cards -->
+<section class="metrics" aria-label="Career highlights">
+  <div class="wrap metrics-in">
+    <div class="metric"><span class="num">12+</span><span class="lab">years across cloud, platform, and reliability engineering</span></div>
+    <div class="metric"><span class="num">99.99%</span><span class="lab">availability sustained on mission-critical telecom platforms</span></div>
+    <div class="metric"><span class="num">7</span><span class="lab">enterprise CI/CD pipelines modernized onto GitOps</span></div>
+    <div class="metric"><span class="num">30+</span><span class="lab">major infrastructure incidents led across cross-functional teams</span></div>
+  </div>
+</section>
+
+<!-- 3. SELECTED WORK : one featured entry + 2x2 grid -->
+<section class="section" id="work">
+  <div class="wrap">
+    <h2 class="h2">Selected platform work</h2>
+    <p class="section-lede">Platforms and automation I designed, built, and operated in production.</p>
+
+    <article class="feature reveal">
+      <div class="feature-head">
+        <h3>Internal Developer Platform</h3>
+        <ul class="chips" aria-label="Technologies">
+          <li>Kubernetes</li><li>Argo CD</li><li>GitOps</li><li>Helm</li>
+        </ul>
+      </div>
+      <p class="feature-body">Self-service deployment workflows that let product teams provision their own namespaces, pipelines, and observability without filing a ticket with the platform team. Templated golden paths replaced one-off environment requests, and GitOps made every change reviewable and reversible.</p>
+    </article>
+
+    <div class="grid-2">
+      <article class="entry reveal">
+        <h3>Terraform IaC module library</h3>
+        <p>Reusable modules for AWS network, compute, and Kubernetes provisioning, published so every team builds environments the same way. New-environment setup dropped from days to hours.</p>
+        <ul class="chips" aria-label="Technologies"><li>Terraform</li><li>AWS</li><li>Remote state</li></ul>
+      </article>
+
+      <article class="entry reveal">
+        <h3>CI/CD delivery pipeline</h3>
+        <p>GitLab CI with self-hosted runners on Kubernetes for elastic, isolated build capacity, and Argo CD for continuous delivery. Jib built images straight from Gradle and Maven, which removed privileged Docker builds from the cluster and cut image build times.</p>
+        <ul class="chips" aria-label="Technologies"><li>GitLab CI</li><li>Argo CD</li><li>Jib</li><li>FastAPI</li><li>Spring Boot</li></ul>
+      </article>
+
+      <article class="entry reveal">
+        <h3>AI and LLM infrastructure</h3>
+        <p>GPU-backed containerized LLM and Jupyter workloads on Kubernetes, exposed through FastAPI and Streamlit endpoints to support AI-assisted engineering workflows and internal developer productivity tooling.</p>
+        <ul class="chips" aria-label="Technologies"><li>GPU scheduling</li><li>Kubernetes</li><li>FastAPI</li><li>Streamlit</li></ul>
+      </article>
+
+      <article class="entry reveal">
+        <h3>Observability and FinOps</h3>
+        <p>Enterprise monitoring across Datadog, Prometheus, Grafana, and OpenSearch to shorten incident detection and response, paired with FinOps-driven rightsizing that improved cloud resource utilization.</p>
+        <ul class="chips" aria-label="Technologies"><li>Datadog</li><li>Prometheus</li><li>Grafana</li><li>OpenSearch</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PLATFORMS : bento of real running sites -->
+<section class="section section-alt" id="platforms">
+  <div class="wrap">
+    <h2 class="h2">Platforms I run in public</h2>
+    <p class="section-lede">Live knowledge and automation systems I design, build, and operate end to end, from content pipelines to GitHub Actions delivery and custom domains.</p>
+
+    <div class="bento">
+      <a class="tile tile-wide reveal" href="https://devops.metacog.co.kr/" target="_blank" rel="noopener">
+        <span class="tile-shot"><img src="/img/devops.webp" width="1100" height="688" alt="DevOps Professional Playbook homepage" loading="lazy" decoding="async"></span>
+        <span class="tile-meta">
+          <span class="tile-name">DevOps Professional Playbook</span>
+          <span class="tile-desc">A 13-competency evidence framework mapped to DORA metrics, with four maturity levels and concrete proof artifacts.</span>
+          <span class="tile-url">devops.metacog.co.kr</span>
+        </span>
+      </a>
+
+      <a class="tile tile-wide reveal" href="https://curadevops.metacog.co.kr/" target="_blank" rel="noopener">
+        <span class="tile-shot"><img src="/img/curadevops.webp" width="1100" height="688" alt="CuraDevOps daily intelligence feed" loading="lazy" decoding="async"></span>
+        <span class="tile-meta">
+          <span class="tile-name">CuraDevOps</span>
+          <span class="tile-desc">Daily DevOps intelligence, judged separately for Platform/SRE, CI/CD, and engineering leadership.</span>
+          <span class="tile-url">curadevops.metacog.co.kr</span>
+        </span>
+      </a>
+
+      <a class="tile reveal" href="https://curasec.metacog.co.kr/" target="_blank" rel="noopener">
+        <span class="tile-shot"><img src="/img/curasec.webp" width="1100" height="688" alt="CuraSec security intelligence feed" loading="lazy" decoding="async"></span>
+        <span class="tile-meta">
+          <span class="tile-name">CuraSec</span>
+          <span class="tile-desc">Security intelligence with per-persona verdicts for engineers, SOC, and leaders.</span>
+          <span class="tile-url">curasec.metacog.co.kr</span>
+        </span>
+      </a>
+
+      <a class="tile reveal" href="https://handson.metacog.co.kr/" target="_blank" rel="noopener">
+        <span class="tile-shot"><img src="/img/handson.webp" width="1100" height="688" alt="Handson DevOps runbook archive" loading="lazy" decoding="async"></span>
+        <span class="tile-meta">
+          <span class="tile-name">Handson</span>
+          <span class="tile-desc">Install manuals, work procedures, and troubleshooting guides from real operations.</span>
+          <span class="tile-url">handson.metacog.co.kr</span>
+        </span>
+      </a>
+
+      <a class="tile reveal" href="https://fw-thinking.metacog.co.kr/" target="_blank" rel="noopener">
+        <span class="tile-shot"><img src="/img/fwthinking.webp" width="1100" height="688" alt="Framework Thinking knowledge base" loading="lazy" decoding="async"></span>
+        <span class="tile-meta">
+          <span class="tile-name">Framework Thinking</span>
+          <span class="tile-desc">A structured IT knowledge system that turns scattered practice into reusable frameworks.</span>
+          <span class="tile-url">fw-thinking.metacog.co.kr</span>
+        </span>
+      </a>
+
+      <a class="tile reveal" href="https://skill.metacog.co.kr/" target="_blank" rel="noopener">
+        <span class="tile-shot"><img src="/img/skill.webp" width="1100" height="688" alt="Claude Skill Hub catalog" loading="lazy" decoding="async"></span>
+        <span class="tile-meta">
+          <span class="tile-name">Claude Skill Hub</span>
+          <span class="tile-desc">A public catalog of installable agent skills for site builders, content pipelines, and dev tooling.</span>
+          <span class="tile-url">skill.metacog.co.kr</span>
+        </span>
+      </a>
+    </div>
+
+    <p class="also">Also running:
+      <a href="https://comparison.metacog.co.kr/" target="_blank" rel="noopener">comparison</a>,
+      <a href="https://comp-thinking.metacog.co.kr/" target="_blank" rel="noopener">comp-thinking</a>,
+      <a href="https://insight.metacog.co.kr/" target="_blank" rel="noopener">insight</a>,
+      <a href="https://meetup.metacog.co.kr/" target="_blank" rel="noopener">meetup</a>,
+      and <a href="https://github.com/jeonck" target="_blank" rel="noopener">more on GitHub</a>.
+    </p>
+  </div>
+</section>
+
+<!-- 5. EXPERIENCE : year-rail timeline -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <h2 class="h2">Experience</h2>
+
+    <ol class="timeline">
+      <li class="role reveal">
+        <div class="role-when"><span class="yr">2025</span><span class="yr-to">2026</span></div>
+        <div class="role-what">
+          <h3>Cloud Infrastructure Specialist and Senior Information Systems Auditor</h3>
+          <p class="role-org">Camino, Seoul</p>
+          <p>Led cloud infrastructure assessments and governance for government cloud-native environments, evaluating security posture, platform readiness, and operational risk. Built Python tooling for infrastructure diagnostics and platform troubleshooting, and partnered with engineering, security, and compliance teams to set cloud governance standards.</p>
+        </div>
+      </li>
+
+      <li class="role reveal">
+        <div class="role-when"><span class="yr">2018</span><span class="yr-to">2025</span></div>
+        <div class="role-what">
+          <h3>DevOps Engineer and SRE Lead</h3>
+          <p class="role-org">SK Telecom, Seoul</p>
+          <p>Operated enterprise Azure and hybrid cloud infrastructure behind mission-critical telecom platforms at 99.99% availability. Architected Kubernetes-based platforms, standardized Terraform and manifest-driven provisioning, modernized seven CI/CD pipelines onto GitOps, and built the observability and self-service workflows product teams used every day.</p>
+        </div>
+      </li>
+
+      <li class="role reveal">
+        <div class="role-when"><span class="yr">2014</span><span class="yr-to">2017</span></div>
+        <div class="role-what">
+          <h3>Corporate QA TF Lead and Senior Infrastructure Strategist</h3>
+          <p class="role-org">SK Telecom, Seoul</p>
+          <p>Led platform readiness for large-scale distributed systems, including performance, stress, and endurance testing in production-equivalent environments. Authored the runbooks and validation frameworks that reduced post-deployment incidents.</p>
+        </div>
+      </li>
+
+      <li class="role reveal">
+        <div class="role-when"><span class="yr">2009</span><span class="yr-to">2013</span></div>
+        <div class="role-what">
+          <h3>Infrastructure Operations Specialist, High-Availability Systems</h3>
+          <p class="role-org">SK Telecom, Seoul</p>
+          <p>Ran 24x7 enterprise Linux infrastructure serving millions of subscribers. Led major incident response across more than thirty enterprise outages, and drove high-availability, disaster recovery, and capacity planning work.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 6. STACK : logo strip + grouped clusters -->
+<section class="section section-alt" id="stack">
+  <div class="wrap">
+    <h2 class="h2">Stack</h2>
+
+    <ul class="logos" aria-label="Core technologies">
+      <li><i class="lg" style="--i:url('/img/logos/kubernetes.svg')" role="img" aria-label="Kubernetes"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/terraform.svg')" role="img" aria-label="Terraform"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/docker.svg')" role="img" aria-label="Docker"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/argo.svg')" role="img" aria-label="Argo CD"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/helm.svg')" role="img" aria-label="Helm"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/gitlab.svg')" role="img" aria-label="GitLab"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/githubactions.svg')" role="img" aria-label="GitHub Actions"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/ansible.svg')" role="img" aria-label="Ansible"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/python.svg')" role="img" aria-label="Python"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/prometheus.svg')" role="img" aria-label="Prometheus"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/grafana.svg')" role="img" aria-label="Grafana"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/datadog.svg')" role="img" aria-label="Datadog"></i></li>
+      <li><i class="lg" style="--i:url('/img/logos/opensearch.svg')" role="img" aria-label="OpenSearch"></i></li>
+    </ul>
+
+    <div class="clusters">
+      <div class="cluster reveal">
+        <h3>Platform and cloud</h3>
+        <ul class="chips"><li>Kubernetes</li><li>AWS</li><li>Azure</li><li>Hybrid cloud</li><li>Terraform</li><li>Helm</li><li>Docker</li><li>Multi-region architecture</li></ul>
+      </div>
+      <div class="cluster reveal">
+        <h3>Delivery and automation</h3>
+        <ul class="chips"><li>GitOps</li><li>Argo CD</li><li>GitLab CI</li><li>GitHub Actions</li><li>Jenkins</li><li>Python</li><li>Ansible</li><li>Golden paths</li></ul>
+      </div>
+      <div class="cluster reveal">
+        <h3>Reliability and observability</h3>
+        <ul class="chips"><li>SRE practice</li><li>Datadog</li><li>Prometheus</li><li>Grafana</li><li>OpenSearch</li><li>EFK</li><li>Incident response</li><li>FinOps</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CREDENTIALS -->
+<section class="section" id="credentials">
+  <div class="wrap creds">
+    <div class="reveal">
+      <h2 class="h2">Certifications</h2>
+      <ul class="plain">
+        <li>AWS Certified Solutions Architect</li>
+        <li>Professional Engineer in Information Technology</li>
+        <li>Senior Information Systems Auditor</li>
+        <li>CCNP, RHCSA, ISTQB</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <h2 class="h2">Education</h2>
+      <ul class="plain">
+        <li><strong>MBA, Technology Management</strong><br>Hanyang University, Seoul</li>
+        <li><strong>BS, Electronics Engineering</strong><br>Kyungpook National University, Daegu</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 8. CONTACT -->
+<footer class="foot" id="contact">
+  <div class="wrap foot-in">
+    <div class="foot-lead">
+      <h2 class="h2">Get in touch</h2>
+      <p>Open to platform engineering, cloud infrastructure, and SRE roles in the U.S. Based in Austin, TX, authorized to work without sponsorship.</p>
+      <a class="btn btn-primary" href="mailto:jeonck2000@gmail.com">jeonck2000@gmail.com</a>
+    </div>
+    <nav class="foot-links" aria-label="Elsewhere">
+      <a href="https://www.linkedin.com/in/metacog/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/jeonck" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://devops.metacog.co.kr/" target="_blank" rel="noopener">Writing</a>
+    </nav>
+  </div>
+  <div class="wrap foot-base">
+    <span>CK Jeon, Austin, TX</span>
+  </div>
+</footer>
+
+</body>
+</html>
