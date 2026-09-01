@@ -7,12 +7,12 @@
 @font-face{font-family:"Geist";src:url("fonts/Geist.woff2") format("woff2-variations");font-weight:100 900}
 @font-face{font-family:"Geist Mono";src:url("fonts/GeistMono.woff2") format("woff2-variations");font-weight:100 900}
 
-@page{ size:Letter; margin:11mm 13mm; }
+@page{ size:Letter; margin:10mm 12mm; }
 
 *{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family:"Geist",-apple-system,sans-serif;
-  font-size:8.9pt; line-height:1.33; color:#1a1c1f;
+  font-size:8.6pt; line-height:1.27; color:#1a1c1f;
   -webkit-font-smoothing:antialiased;
 }
 a{color:#0a6e52; text-decoration:none}
@@ -31,41 +31,41 @@ a{color:#0a6e52; text-decoration:none}
 /* sections */
 h2{
   font-size:7.9pt; font-weight:600; text-transform:uppercase; letter-spacing:.11em;
-  color:#0a6e52; margin:10pt 0 5pt; padding-bottom:2.5pt;
+  color:#0a6e52; margin:8pt 0 4pt; padding-bottom:2pt;
   border-bottom:.6pt solid #dfe1e3;
 }
 p.summary{text-align:justify}
 
 /* skills */
-.skill-row{display:flex; gap:8pt; margin-bottom:3pt; break-inside:avoid}
+.skill-row{display:flex; gap:8pt; margin-bottom:2.2pt; break-inside:avoid}
 .skill-key{width:118pt; flex:none; font-weight:600; font-size:8.8pt; color:#2b2e32}
 .skill-val{flex:1; color:#3f444a; font-size:9pt}
 
 /* jobs */
-.job{margin-bottom:7pt; break-inside:avoid}
+.job{margin-bottom:5pt; break-inside:avoid}
 .job-head{display:flex; justify-content:space-between; align-items:baseline; gap:12pt}
 .job-title{font-size:9.6pt; font-weight:600; letter-spacing:-.012em}
 .job-when{
   font-family:"Geist Mono",monospace; font-size:7.8pt; color:#6a6f75;
   white-space:nowrap; flex:none;
 }
-.job-org{font-size:8.8pt; color:#0a6e52; margin:1.5pt 0 4pt}
+.job-org{font-size:8.6pt; color:#0a6e52; margin:1pt 0 3pt}
 ul{list-style:none; margin:0}
-li{position:relative; padding-left:8pt; margin-bottom:1.6pt; color:#3f444a}
+li{position:relative; padding-left:8pt; margin-bottom:1.1pt; color:#3f444a}
 li::before{
   content:""; position:absolute; left:0; top:5.2pt;
   width:2.6pt; height:2.6pt; border-radius:50%; background:#b3b8bd;
 }
 
 /* projects */
-.proj{margin-bottom:4.5pt; break-inside:avoid}
+.proj{margin-bottom:3.4pt; break-inside:avoid}
 .proj-name{font-weight:600; color:#2b2e32}
 .proj p{display:inline; color:#3f444a}
 
 /* footer blocks */
 .two{display:flex; gap:26pt}
 .two > div{flex:1}
-.cred{margin-bottom:3pt; color:#3f444a}
+.cred{margin-bottom:2pt; color:#3f444a}
 .cred strong{color:#2b2e32; font-weight:600}
 </style>
 </head>
@@ -173,6 +173,19 @@ li::before{
 <div class="proj"><span class="proj-name">CI/CD automation pipeline.</span> <p>Built an end-to-end delivery pipeline with GitLab CI running self-hosted runners on Kubernetes for elastic, isolated build capacity, and Argo CD for GitOps-based continuous delivery. Containerized FastAPI and Spring Boot services using Jib to build images directly from the Gradle and Maven build, removing privileged builds from the cluster and shortening image build times.</p></div>
 <div class="proj"><span class="proj-name">AI/LLM infrastructure platform.</span> <p>Deployed GPU-backed containerized LLM and Jupyter workloads on Kubernetes with FastAPI and Streamlit service endpoints, supporting AI-assisted engineering workflows and internal developer productivity tooling.</p></div>
 <div class="proj"><span class="proj-name">Technical writing.</span> <p>Publish platform engineering, SRE, and AI infrastructure practice notes at devops.metacog.co.kr and fw-thinking.metacog.co.kr, documenting hands-on experiments and architecture decisions. Also run comparison.metacog.co.kr and comp-thinking.metacog.co.kr.</p></div>
+
+<h2>Selected Projects</h2>
+<div class="proj"><span class="proj-name">Endpoint Security Management Solution (2020 - 2021).</span> <p>Led end-to-end development of an enterprise-grade endpoint security management solution, establishing centralized visibility and control over diverse endpoint assets. Conducted security audits and risk assessments, applying zero-trust architecture principles to fortify the security posture.</p></div>
+<div class="proj"><span class="proj-name">Systems Stability and Security Assurance (2015 - 2017).</span> <p>Directed static analysis initiatives using Fortify to identify structural risks and implement security hardening protocols. Established a secure test bed environment validating both functional and security parameters of cross-unit interactions.</p></div>
+<div class="proj"><span class="proj-name">IT Stack Optimization and Best Practice TF (2014).</span> <p>Led a specialized task force standardizing the IT stack across OS, database, WAS, and network, authoring integrated best-practice guidelines that reduced integration-related failures.</p></div>
+<div class="proj"><span class="proj-name">Integrated System Maintenance and KPI Management (2009).</span> <p>Managed monthly KPI reporting for integrated systems, using data-driven insights to optimize maintenance cycles.</p></div>
+<div class="proj"><span class="proj-name">Overseas Telecommunications Network Operation KPI (2005 - 2008).</span> <p>Directed telecommunications network operation KPIs for Ho Chi Minh City and Hanoi, Vietnam, ensuring seamless technology transfer and quality compliance.</p></div>
+
+<h2>Patents</h2>
+<div class="proj"><span class="proj-name">Intelligent Endpoint Security Management.</span> <p>KR20230013443A, 2023</p></div>
+<div class="proj"><span class="proj-name">Automated Security Information Categorization.</span> <p>KR20230018724A, 2023</p></div>
+<div class="proj"><span class="proj-name">Organizational Chart Automation for Security.</span> <p>KR20220035711A, 2022</p></div>
+<div class="proj"><span class="proj-name">Application Service Quality Indicator System.</span> <p>KR101567993B1, 2015</p></div>
 
 <div class="two">
   <div>
