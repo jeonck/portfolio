@@ -323,6 +323,8 @@ h1{
 .plain{list-style:none; margin:22px 0 0; padding:0}
 .plain li{padding:13px 0; border-top:1px solid var(--line-soft); color:var(--muted); font-size:15.2px}
 .plain li strong{color:var(--text); font-weight:500}
+.plain a{color:inherit; text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:3px}
+.plain a:hover{text-decoration-color:var(--accent)}
 
 /* ---------- footer ---------- */
 .foot{background:var(--surface); border-top:1px solid var(--line); padding:clamp(56px,7vw,88px) 0 0}
