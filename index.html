@@ -52,6 +52,7 @@
     </a>
     <nav class="nav-links" aria-label="Sections">
       <a href="#work">Work</a>
+      <a href="#oss">Open source</a>
       <a href="#platforms">Platforms</a>
       <a href="#experience">Experience</a>
       <a href="#stack">Stack</a>
@@ -137,6 +138,58 @@
   </div>
 </section>
 
+<!-- 3b. OPEN SOURCE : recent public repos -->
+<section class="section" id="oss">
+  <div class="wrap">
+    <h2 class="h2">Open source</h2>
+    <p class="section-lede">Recent public builds. Each one exists to remove a specific class of failure I have been paged for.</p>
+
+    <div class="grid-2">
+      <article class="entry reveal">
+        <h3><a href="https://github.com/jeonck/terraform-optimal" target="_blank" rel="noopener">terraform-optimal</a></h3>
+        <span class="entry-when">github.com/jeonck/terraform-optimal</span>
+        <p>Terraform reference lab with guardrails at four layers: S3 remote state with native locking and CI concurrency groups, apply only from saved plan files with daily drift detection, per-environment state split with for_each keyed modules, and a double gate of variable validation plus OPA/conftest at plan time.</p>
+        <ul class="chips"><li>Terraform</li><li>OPA</li><li>AWS</li><li>GitHub Actions</li></ul>
+      </article>
+
+      <article class="entry reveal">
+        <h3><a href="https://github.com/jeonck/terraform-aws-lab" target="_blank" rel="noopener">terraform-aws-lab</a></h3>
+        <span class="entry-when">github.com/jeonck/terraform-aws-lab</span>
+        <p>Twenty ordered labs from a first S3 bucket through modules, environment separation, remote state, and a GitHub Actions pipeline, then on to security scanning, state recovery, policy as code, multi-region, IAM least privilege, native Terraform tests, drift detection, ECS, and EKS.</p>
+        <ul class="chips"><li>Terraform</li><li>AWS</li><li>EKS</li><li>Policy as code</li></ul>
+      </article>
+
+      <article class="entry reveal">
+        <h3><a href="https://github.com/jeonck/devops-tools" target="_blank" rel="noopener">OpsForge</a></h3>
+        <span class="entry-when">github.com/jeonck/devops-tools</span>
+        <p>One project context generates nine artifacts in sync: Dockerfile, Compose, Kubernetes manifests, Helm chart, Terraform, GitHub Actions, GitLab CI, Ansible playbook, and Nginx config. Change a port once and every artifact follows, so the config drift behind so many deployment incidents cannot occur.</p>
+        <ul class="chips"><li>TypeScript</li><li>Kubernetes</li><li>Helm</li><li>CI/CD</li></ul>
+      </article>
+
+      <article class="entry reveal">
+        <h3><a href="https://github.com/jeonck/webfusion" target="_blank" rel="noopener">WebFusion</a></h3>
+        <span class="entry-when">github.com/jeonck/webfusion</span>
+        <p>Shift-left DevSecOps toolkit fusing two workflows over one codebase: a headless scanner with SARIF and JSON output and CI exit-code gates, and a local intercepting proxy with repeater and fuzzer for hands-on verification.</p>
+        <ul class="chips"><li>Python</li><li>SARIF</li><li>DevSecOps</li><li>OWASP</li></ul>
+      </article>
+
+      <article class="entry reveal">
+        <h3><a href="https://github.com/jeonck/secbrain" target="_blank" rel="noopener">secbrain</a></h3>
+        <span class="entry-when">github.com/jeonck/secbrain</span>
+        <p>A second brain that is only Markdown, Git, and Claude. GitHub Pages publishes the vault as a dashboard, graph, and task board, and a button on the site opens a GitHub issue that triggers Claude Code inside Actions to write and commit notes. The browser holds zero secrets; execution happens only on the runner.</p>
+        <ul class="chips"><li>GitHub Actions</li><li>Claude Code</li><li>Agentic workflow</li></ul>
+      </article>
+
+      <article class="entry reveal">
+        <h3><a href="https://github.com/jeonck/interactive-knowledge-graph-engine" target="_blank" rel="noopener">Graph Engine</a></h3>
+        <span class="entry-when">graph-engine.metacog.co.kr</span>
+        <p>Turns any network into an interactive knowledge graph and only trusts what randomness cannot explain. PageRank, HITS, betweenness, and Louvain communities are each validated against a degree-preserving null model with Benjamini-Hochberg correction, then rendered by a dependency-free D3 page.</p>
+        <ul class="chips"><li>Python</li><li>networkx</li><li>D3.js</li><li>Statistics</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- 4. PLATFORMS : bento of real running sites -->
 <section class="section section-alt" id="platforms">
   <div class="wrap">
@@ -209,6 +262,9 @@
     </div>
 
     <p class="also">Also running:
+      <a href="https://architectures.metacog.co.kr/" target="_blank" rel="noopener">architectures</a>,
+      <a href="https://checklists.metacog.co.kr/" target="_blank" rel="noopener">checklists</a>,
+      <a href="https://automations.metacog.co.kr/" target="_blank" rel="noopener">automations</a>,
       <a href="https://comparison.metacog.co.kr/" target="_blank" rel="noopener">comparison</a>,
       <a href="https://comp-thinking.metacog.co.kr/" target="_blank" rel="noopener">comp-thinking</a>,
       <a href="https://insight.metacog.co.kr/" target="_blank" rel="noopener">insight</a>,
