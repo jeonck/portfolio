@@ -39,6 +39,20 @@
   "sameAs": ["https://github.com/jeonck","https://www.linkedin.com/in/metacog/"]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Reliability at Scale: Advanced SRE for Staff Engineers",
+  "author": { "@type": "Person", "name": "CK Jeon" },
+  "datePublished": "2026-09-28",
+  "numberOfPages": 354,
+  "bookFormat": "https://schema.org/EBook",
+  "inLanguage": "en",
+  "url": "https://www.amazon.com/dp/B0HLBNJM6T"
+}
+</script>
 </head>
 <body>
 
@@ -51,6 +65,7 @@
       <span class="brand-name">CK Jeon</span>
     </a>
     <nav class="nav-links" aria-label="Sections">
+      <a href="#book">Book</a>
       <a href="#work">Work</a>
       <a href="#oss">Open source</a>
       <a href="#platforms">Platforms</a>
@@ -91,6 +106,45 @@
     <div class="metric"><span class="num">99.99%</span><span class="lab">availability sustained on mission-critical telecom platforms</span></div>
     <div class="metric"><span class="num">7</span><span class="lab">enterprise CI/CD pipelines modernized onto GitOps</span></div>
     <div class="metric"><span class="num">30+</span><span class="lab">major infrastructure incidents led across cross-functional teams</span></div>
+  </div>
+</section>
+
+<!-- 2b. BOOK : published work, cover left / argument right -->
+<section class="section" id="book">
+  <div class="wrap book-in">
+    <div class="book-cover reveal">
+      <a class="shot" href="https://www.amazon.com/dp/B0HLBNJM6T" target="_blank" rel="noopener">
+        <img src="/img/book-cover.webp" width="700" height="1119" alt="Cover of Reliability at Scale, Advanced SRE for Staff Engineers, by CK Jeon" loading="lazy" decoding="async">
+      </a>
+    </div>
+
+    <div class="book-body">
+      <h2 class="h2">Reliability at Scale</h2>
+      <p class="book-sub">Advanced SRE for Staff Engineers</p>
+      <p class="section-lede">Built on questions I carried through 16 years of running mission-critical telecom platforms. Most serious reliability problems do not come from missing tools. They come from broken feedback loops.</p>
+
+      <div class="grid-2">
+        <article class="entry reveal">
+          <h3>Technical loops</h3>
+          <span class="entry-when">inside the system</span>
+          <p>They grow an outage and hold it in place. Retry storms that backoff and jitter cannot fix. Outages that outlive their trigger, where you roll the bad deploy back, traffic returns to normal, and the system is still on fire.</p>
+        </article>
+
+        <article class="entry reveal">
+          <h3>Organizational loops</h3>
+          <span class="entry-when">around the system</span>
+          <p>Measurement that never turns into a decision. Error budgets that run out while the launch ships anyway. Postmortems that find the root cause, close every action item, and still let a similar incident happen again.</p>
+        </article>
+      </div>
+
+      <p class="book-line">A technical loop keeps an outage from ending. An organizational loop makes it happen again.</p>
+
+      <p class="book-scope">Fourteen chapters covering blast radius through cells and shuffle sharding, telemetry cost and gray failure, capacity by queueing theory, safe config delivery, incident command, and a side-by-side reading of 16 public postmortems.</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.amazon.com/dp/B0HLBNJM6T" target="_blank" rel="noopener">View the book on Amazon</a>
+      </div>
+    </div>
   </div>
 </section>
 

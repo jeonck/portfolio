@@ -209,6 +209,20 @@ h1{
 }
 .section-lede{margin:14px 0 0; max-width:62ch; color:var(--muted)}
 
+/* ---------- book ---------- */
+.book-in{display:grid; gap:clamp(28px,4vw,56px); grid-template-columns:1fr; align-items:start}
+@media (min-width:860px){ .book-in{grid-template-columns:260px 1fr} }
+.book-cover .shot{max-width:260px}
+.book-sub{margin:8px 0 0; font-size:1.05rem; color:var(--accent); font-weight:500}
+.book-body .section-lede{margin-top:18px}
+.book-body .grid-2{margin-top:4px}
+.book-line{
+  margin:30px 0 0; padding-left:16px; border-left:2px solid var(--accent);
+  font-size:1.02rem; color:var(--text);
+}
+.book-scope{margin:22px 0 0; max-width:70ch; color:var(--muted); font-size:15.2px}
+.book-body .cta-row{margin-top:28px}
+
 /* ---------- selected work ---------- */
 .feature{
   margin-top:44px; padding-top:32px; border-top:1px solid var(--line);

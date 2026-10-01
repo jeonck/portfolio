@@ -7,12 +7,12 @@
 @font-face{font-family:"Geist";src:url("fonts/Geist.woff2") format("woff2-variations");font-weight:100 900}
 @font-face{font-family:"Geist Mono";src:url("fonts/GeistMono.woff2") format("woff2-variations");font-weight:100 900}
 
-@page{ size:Letter; margin:10mm 12mm; }
+@page{ size:Letter; margin:9mm 11mm; }
 
 *{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family:"Geist",-apple-system,sans-serif;
-  font-size:8.6pt; line-height:1.27; color:#1a1c1f;
+  font-size:8.4pt; line-height:1.22; color:#1a1c1f;
   -webkit-font-smoothing:antialiased;
 }
 a{color:#0a6e52; text-decoration:none}
@@ -31,18 +31,18 @@ a{color:#0a6e52; text-decoration:none}
 /* sections */
 h2{
   font-size:7.9pt; font-weight:600; text-transform:uppercase; letter-spacing:.11em;
-  color:#0a6e52; margin:8pt 0 4pt; padding-bottom:2pt;
+  color:#0a6e52; margin:6.5pt 0 3.2pt; padding-bottom:1.6pt;
   border-bottom:.6pt solid #dfe1e3;
 }
 p.summary{text-align:justify}
 
 /* skills */
-.skill-row{display:flex; gap:8pt; margin-bottom:2.2pt; break-inside:avoid}
+.skill-row{display:flex; gap:8pt; margin-bottom:1.8pt; break-inside:avoid}
 .skill-key{width:118pt; flex:none; font-weight:600; font-size:8.8pt; color:#2b2e32}
 .skill-val{flex:1; color:#3f444a; font-size:9pt}
 
 /* jobs */
-.job{margin-bottom:5pt; break-inside:avoid}
+.job{margin-bottom:4pt; break-inside:avoid}
 .job-head{display:flex; justify-content:space-between; align-items:baseline; gap:12pt}
 .job-title{font-size:9.6pt; font-weight:600; letter-spacing:-.012em}
 .job-when{
@@ -51,14 +51,14 @@ p.summary{text-align:justify}
 }
 .job-org{font-size:8.6pt; color:#0a6e52; margin:1pt 0 3pt}
 ul{list-style:none; margin:0}
-li{position:relative; padding-left:8pt; margin-bottom:1.1pt; color:#3f444a}
+li{position:relative; padding-left:7pt; margin-bottom:0.8pt; color:#3f444a}
 li::before{
   content:""; position:absolute; left:0; top:5.2pt;
   width:2.6pt; height:2.6pt; border-radius:50%; background:#b3b8bd;
 }
 
 /* projects */
-.proj{margin-bottom:3.4pt; break-inside:avoid}
+.proj{margin-bottom:2.8pt; break-inside:avoid}
 .proj-name{font-weight:600; color:#2b2e32}
 .proj p{display:inline; color:#3f444a}
 
@@ -103,6 +103,9 @@ li::before{
   <div class="skill-key">Observability</div>
   <div class="skill-val">Datadog, Prometheus, Grafana, OpenSearch, EFK stack, performance monitoring, reliability engineering</div>
 </div>
+
+<h2>Publication</h2>
+<div class="proj"><span class="proj-name"><a href="https://www.amazon.com/dp/B0HLBNJM6T">Reliability at Scale: Advanced SRE for Staff Engineers</a> (2026).</span> <p>354-page technical book drawn from 16 years running mission-critical telecom platforms, on the technical and organizational feedback loops behind serious reliability failures: retry storms, outages that outlive their trigger, error budgets that do not bind, and postmortems that change nothing. Fourteen chapters covering blast radius, gray failure, queueing-theory capacity, safe config delivery, incident command, and 16 public postmortems.</p></div>
 
 <h2>Work Experience</h2>
 
