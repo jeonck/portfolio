@@ -31,41 +31,41 @@ a{color:#0a6e52; text-decoration:none}
 /* sections */
 h2{
   font-size:7.9pt; font-weight:600; text-transform:uppercase; letter-spacing:.11em;
-  color:#0a6e52; margin:6.5pt 0 3.2pt; padding-bottom:1.6pt;
+  color:#0a6e52; margin:5.2pt 0 2.6pt; padding-bottom:1.3pt;
   border-bottom:.6pt solid #dfe1e3;
 }
 p.summary{text-align:justify}
 
 /* skills */
-.skill-row{display:flex; gap:8pt; margin-bottom:1.8pt; break-inside:avoid}
+.skill-row{display:flex; gap:8pt; margin-bottom:1.4pt; break-inside:avoid}
 .skill-key{width:118pt; flex:none; font-weight:600; font-size:8.8pt; color:#2b2e32}
 .skill-val{flex:1; color:#3f444a; font-size:9pt}
 
 /* jobs */
-.job{margin-bottom:4pt; break-inside:avoid}
+.job{margin-bottom:3.2pt; break-inside:avoid}
 .job-head{display:flex; justify-content:space-between; align-items:baseline; gap:12pt}
 .job-title{font-size:9.6pt; font-weight:600; letter-spacing:-.012em}
 .job-when{
   font-family:"Geist Mono",monospace; font-size:7.8pt; color:#6a6f75;
   white-space:nowrap; flex:none;
 }
-.job-org{font-size:8.6pt; color:#0a6e52; margin:1pt 0 3pt}
+.job-org{font-size:8.4pt; color:#0a6e52; margin:0.8pt 0 2.4pt}
 ul{list-style:none; margin:0}
-li{position:relative; padding-left:7pt; margin-bottom:0.8pt; color:#3f444a}
+li{position:relative; padding-left:7pt; margin-bottom:0.5pt; color:#3f444a}
 li::before{
   content:""; position:absolute; left:0; top:5.2pt;
   width:2.6pt; height:2.6pt; border-radius:50%; background:#b3b8bd;
 }
 
 /* projects */
-.proj{margin-bottom:2.8pt; break-inside:avoid}
+.proj{margin-bottom:2.1pt; break-inside:avoid}
 .proj-name{font-weight:600; color:#2b2e32}
 .proj p{display:inline; color:#3f444a}
 
 /* footer blocks */
 .two{display:flex; gap:26pt}
 .two > div{flex:1}
-.cred{margin-bottom:2pt; color:#3f444a}
+.cred{margin-bottom:1.4pt; color:#3f444a}
 .cred strong{color:#2b2e32; font-weight:600}
 </style>
 </head>
@@ -75,7 +75,7 @@ li::before{
 <div class="role">Platform Engineering &amp; Cloud Infrastructure Leader</div>
 <div class="contact">
   <span>jeonck2000@gmail.com</span><span class="sep">/</span><span>Austin, TX</span><span class="sep">/</span><span>U.S. Permanent Resident, no sponsorship required</span><br>
-  <span>jeonck.metacog.co.kr</span><span class="sep">/</span><span>linkedin.com/in/metacog</span><span class="sep">/</span><span>github.com/jeonck</span>
+  <span><a href="https://jeonck.metacog.co.kr/">jeonck.metacog.co.kr</a></span><span class="sep">/</span><span><a href="https://devops.metacog.co.kr/">devops.metacog.co.kr</a></span><span class="sep">/</span><span><a href="https://www.linkedin.com/in/metacog/">linkedin.com/in/metacog</a></span><span class="sep">/</span><span><a href="https://github.com/jeonck">github.com/jeonck</a></span>
 </div>
 <div class="rule"></div>
 
@@ -183,6 +183,14 @@ li::before{
 <div class="proj"><span class="proj-name">IT Stack Optimization and Best Practice TF (2014).</span> <p>Led a specialized task force standardizing the IT stack across OS, database, WAS, and network, authoring integrated best-practice guidelines that reduced integration-related failures.</p></div>
 <div class="proj"><span class="proj-name">Integrated System Maintenance and KPI Management (2009).</span> <p>Managed monthly KPI reporting for integrated systems, using data-driven insights to optimize maintenance cycles.</p></div>
 <div class="proj"><span class="proj-name">Overseas Posting, Vietnam Network Operations (2005 - 2008).</span> <p>Resident overseas assignment directing telecommunications network operation KPIs for Ho Chi Minh City and Hanoi, handling technology transfer and quality compliance with local operating teams.</p></div>
+
+<h2>Open Source</h2>
+<div class="proj"><span class="proj-name"><a href="https://github.com/jeonck/terraform-optimal">terraform-optimal</a>.</span> <p>Terraform reference lab with guardrails at four layers: S3 remote state with native locking and CI concurrency groups, apply only from saved plan files with daily drift detection, per-environment state split, and variable validation plus OPA/conftest gates at plan time.</p></div>
+<div class="proj"><span class="proj-name"><a href="https://github.com/jeonck/terraform-aws-lab">terraform-aws-lab</a>.</span> <p>Twenty ordered AWS labs from a first S3 bucket through modules, environment separation, remote state, and CI/CD, then security scanning, state recovery, policy as code, multi-region, IAM least privilege, native tests, drift detection, ECS, and EKS.</p></div>
+<div class="proj"><span class="proj-name"><a href="https://github.com/jeonck/devops-tools">OpsForge</a>.</span> <p>One project context generates nine artifacts in sync (Dockerfile, Compose, Kubernetes manifests, Helm, Terraform, GitHub Actions, GitLab CI, Ansible, Nginx), eliminating the config drift behind many deployment incidents.</p></div>
+<div class="proj"><span class="proj-name"><a href="https://github.com/jeonck/webfusion">WebFusion</a>.</span> <p>Shift-left DevSecOps toolkit: a headless scanner with SARIF and JSON output and CI exit-code gates, plus a local intercepting proxy with repeater and fuzzer for verification.</p></div>
+<div class="proj"><span class="proj-name"><a href="https://github.com/jeonck/secbrain">secbrain</a>.</span> <p>Markdown, Git, and Claude second brain. A site button opens a GitHub issue that triggers Claude Code inside Actions to write and commit notes; the browser holds zero secrets and execution happens only on the runner.</p></div>
+<div class="proj"><span class="proj-name"><a href="https://github.com/jeonck/interactive-knowledge-graph-engine">Graph Engine</a>.</span> <p>PageRank, HITS, betweenness, and Louvain communities validated against a degree-preserving null model with Benjamini-Hochberg correction, exported to a dependency-free D3 page at graph-engine.metacog.co.kr.</p></div>
 
 <h2>Patents</h2>
 <div class="proj"><span class="proj-name">Intelligent Endpoint Security Management.</span> <p><a href="https://patents.google.com/patent/KR20230013443A/en" target="_blank" rel="noopener">KR20230013443A</a>, 2023</p></div>
