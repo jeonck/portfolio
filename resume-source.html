@@ -65,6 +65,8 @@ li::before{
 /* footer blocks */
 .two{display:flex; gap:26pt}
 .two > div{flex:1}
+.two > div:first-child{flex:.72}
+.two > div:last-child{flex:1.28}
 .cred{margin-bottom:1.4pt; color:#3f444a}
 .cred strong{color:#2b2e32; font-weight:600}
 </style>
@@ -185,6 +187,7 @@ li::before{
 <div class="proj"><span class="proj-name">Overseas Posting, Vietnam Network Operations (2005 - 2008).</span> <p>Resident overseas assignment directing telecommunications network operation KPIs for Ho Chi Minh City and Hanoi, handling technology transfer and quality compliance with local operating teams.</p></div>
 
 <h2>Open Source</h2>
+<div class="proj"><span class="proj-name"><a href="https://fieldcases.metacog.co.kr/">Field Cases</a>.</span> <p>Public knowledge system for ICT failure modes (<a href="https://github.com/jeonck/field-cases">source</a>). A promotion test decides what gets written; notes are titled by symptom, tagged on three axes (target, layer, symptom), linked three ways, and masked while writing. Markdown in Git, published with Quartz and GitHub Actions. The notes are worked examples, not client engagements.</p></div>
 <div class="proj"><span class="proj-name"><a href="https://github.com/jeonck/terraform-optimal">terraform-optimal</a>.</span> <p>Terraform reference lab with guardrails at four layers: S3 remote state with native locking and CI concurrency groups, apply only from saved plan files with daily drift detection, per-environment state split, and variable validation plus OPA/conftest gates at plan time.</p></div>
 <div class="proj"><span class="proj-name"><a href="https://github.com/jeonck/terraform-aws-lab">terraform-aws-lab</a>.</span> <p>Twenty ordered AWS labs from a first S3 bucket through modules, environment separation, remote state, and CI/CD, then security scanning, state recovery, policy as code, multi-region, IAM least privilege, native tests, drift detection, ECS, and EKS.</p></div>
 <div class="proj"><span class="proj-name"><a href="https://github.com/jeonck/devops-tools">OpsForge</a>.</span> <p>One project context generates nine artifacts in sync (Dockerfile, Compose, Kubernetes manifests, Helm, Terraform, GitHub Actions, GitLab CI, Ansible, Nginx), eliminating the config drift behind many deployment incidents.</p></div>
@@ -202,7 +205,7 @@ li::before{
   <div>
     <h2>Education</h2>
     <div class="cred"><strong>MBA, Technology Management</strong><br>Hanyang University, Seoul, South Korea</div>
-    <div class="cred"><strong>BS, Electronics Engineering</strong><br>Kyungpook National University, Daegu, South Korea</div>
+    <div class="cred"><strong>BS, Electronics Engineering</strong><br>Kyungpook National University,<br>Daegu, South Korea</div>
   </div>
   <div>
     <h2>Certifications</h2>

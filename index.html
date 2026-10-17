@@ -68,6 +68,7 @@
       <a href="#book">Book</a>
       <a href="#work">Work</a>
       <a href="#oss">Open source</a>
+      <a href="#knowledge">Knowledge</a>
       <a href="#platforms">Platforms</a>
       <a href="#experience">Experience</a>
       <a href="#stack">Stack</a>
@@ -241,6 +242,81 @@
         <ul class="chips"><li>Python</li><li>networkx</li><li>D3.js</li><li>Statistics</li></ul>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- 3c. KNOWLEDGE : the system behind the notes, not just the notes -->
+<section class="section" id="knowledge">
+  <div class="wrap">
+    <div class="kb-intro">
+      <div class="kb-copy">
+        <h2 class="h2">Field Cases</h2>
+        <p class="book-sub">A knowledge system for things that break</p>
+        <p class="section-lede">A public notebook of ICT failure modes and the system behind it: how a scrap becomes a note, and how each note is titled, tagged, linked, and masked before it is published.</p>
+        <ul class="chips" aria-label="Details">
+          <li>Markdown + Git</li><li>Quartz v5</li><li>GitHub Actions</li><li>20 problem notes</li><li>20 concept notes</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://fieldcases.metacog.co.kr/" target="_blank" rel="noopener">Read the notebook</a>
+          <a class="btn btn-ghost" href="https://github.com/jeonck/field-cases" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+      <a class="shot reveal" href="https://fieldcases.metacog.co.kr/" target="_blank" rel="noopener">
+        <img src="/img/fieldcases.webp" width="1100" height="688" alt="Field Cases home page with the explorer tree of concepts, maps, meta and problems, and the knowledge graph view" loading="lazy" decoding="async">
+      </a>
+    </div>
+
+    <h3 class="sub-h">How a note is made</h3>
+    <div class="rules">
+      <div class="rule reveal">
+        <span class="entry-when">Before writing</span>
+        <h4>Does it earn a note?</h4>
+        <p>One test decides: will someone hit this again in six months? No means do not write it. Unclear means it waits in the inbox.</p>
+      </div>
+      <div class="rule reveal">
+        <span class="entry-when">The title</span>
+        <h4>Name the symptom, not the conclusion.</h4>
+        <p>Future searches start from what was seen. &ldquo;Connections hang for 30s after failover&rdquo; gets found. &ldquo;pgbouncer misconfiguration&rdquo; does not.</p>
+      </div>
+      <div class="rule reveal">
+        <span class="entry-when">The investigation</span>
+        <h4>Keep the dead ends.</h4>
+        <p>Error messages are pasted verbatim and rejected hypotheses stay in. The &ldquo;last change&rdquo; row is never empty, and an empty open-questions section is read as avoidance.</p>
+      </div>
+      <div class="rule reveal">
+        <span class="entry-when">Tagging</span>
+        <h4>Three axes: target, layer, symptom.</h4>
+        <p>Layer records where the cause was, not where it hurt, capped at 12 values. A network-looking problem that was a pool limit is filed under Database.</p>
+      </div>
+      <div class="rule reveal">
+        <span class="entry-when">Linking</span>
+        <h4>Three links minimum, inside sentences.</h4>
+        <p>A parent concept, a sibling problem, and a hub. The map is edited by hand: if adding the line feels like a chore, the note was not worth promoting.</p>
+      </div>
+      <div class="rule reveal">
+        <span class="entry-when">Before committing</span>
+        <h4>Mask while writing.</h4>
+        <p>Git history remembers what you delete, so values are substituted in the draft and the shape is kept. The test: could the customer&rsquo;s own engineer read it?</p>
+      </div>
+    </div>
+
+    <h3 class="sub-h">What it produces</h3>
+    <ul class="kb-examples">
+      <li class="reveal">
+        <a href="https://fieldcases.metacog.co.kr/problems/p99-latency-spikes-while-cpu-utilisation-sits-at-30-percent" target="_blank" rel="noopener">p99 latency spikes to 400ms while CPU utilisation sits at 30%</a>
+        <span>Both dashboard numbers were correct. Bigger nodes multiplied the thread count against an unchanged CPU quota.</span>
+      </li>
+      <li class="reveal">
+        <a href="https://fieldcases.metacog.co.kr/problems/a-revoked-account-kept-working-for-four-hours" target="_blank" rel="noopener">A revoked account kept working for four hours, and nothing anywhere recorded a problem</a>
+        <span>A decision cache added for latency silently became the longest link in the revocation chain.</span>
+      </li>
+      <li class="reveal">
+        <a href="https://fieldcases.metacog.co.kr/problems/a-40-second-blip-became-a-25-minute-outage" target="_blank" rel="noopener">A 40-second downstream blip became a 25-minute outage that continued after the downstream recovered</a>
+        <span>Retries at two layers multiplied one request into nine. The load sustaining the outage was the outage&rsquo;s own output.</span>
+      </li>
+    </ul>
+
+    <p class="kb-note">The notes are worked examples of well-documented failure modes, not client engagements. The format, taxonomy, and masking rules are the part meant to be reused.</p>
   </div>
 </section>
 
