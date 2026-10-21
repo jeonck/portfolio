@@ -325,8 +325,8 @@
 <section class="section" id="labs">
   <div class="wrap">
     <h2 class="h2">Hands-on labs</h2>
-    <p class="book-sub">Measured results, with the limits written down</p>
-    <p class="section-lede">Labs I run and write up, 58 verified since August. Each records the versions it ran on and the day it was verified, and where a lab could not prove something, the document says so. These are lab results, not production claims.</p>
+    <p class="book-sub">Measured results, with the environment recorded</p>
+    <p class="section-lede">Labs I run and write up, 58 verified since August. Each one records the exact versions and environment it ran on and the day it was verified. These are lab results, not production claims.</p>
 
     <ol class="labs">
         <li class="lab reveal">
@@ -337,7 +337,7 @@
           </div>
           <div class="lab-limit">
             <span class="lab-k">Verified 2026-08-08</span>
-            <p><b>Not proven:</b> ran on three EC2 t3.medium instances, not bare metal. Real NIC and driver behaviour, swap, product_uuid collisions, and ufw rules.</p>
+            <p><b>Environment:</b> Ubuntu 24.04 LTS, Kubernetes 1.31.14 (kubeadm), containerd 2.2.1, Calico 3.28.2, on three AWS EC2 t3.medium instances.</p>
           </div>
         </li>
         <li class="lab reveal">
@@ -348,7 +348,7 @@
           </div>
           <div class="lab-limit">
             <span class="lab-k">Verified 2026-08-18</span>
-            <p><b>Not proven:</b> two EC2 instances stood in for on-prem, single-node rather than three, with a plain HTTP registry. cert-manager registry TLS and real multi-node scheduling.</p>
+            <p><b>Environment:</b> GitLab 17.x with a Kubernetes-executor Runner, Argo CD, and kubeadm 1.31 with Calico, on two AWS EC2 instances standing in for on-prem. FastAPI 0.141.1, Podman 5.7.1.</p>
           </div>
         </li>
         <li class="lab reveal">
@@ -359,7 +359,7 @@
           </div>
           <div class="lab-limit">
             <span class="lab-k">Verified 2026-08-17</span>
-            <p><b>Not proven:</b> AWS itself (IAM, versioning, real S3 semantics) and the DynamoDB lock table most setups still use.</p>
+            <p><b>Environment:</b> Terraform 1.15.7 on macOS arm64, against three local backends: an http backend, an S3 stub, and Garage 2.3.0 in Podman.</p>
           </div>
         </li>
         <li class="lab reveal">
@@ -370,7 +370,7 @@
           </div>
           <div class="lab-limit">
             <span class="lab-k">Verified 2026-08-24</span>
-            <p><b>Not proven:</b> a real 28-day budget, since every long window returned identical values on under 30 minutes of history. Alert routing, silences, and on-call escalation.</p>
+            <p><b>Environment:</b> Prometheus 3.14.0, Alertmanager 0.28.1, prometheus-client 0.26.0, FastAPI 0.141.1, Podman 5.7.1 with docker-compose, on macOS.</p>
           </div>
         </li>
         <li class="lab reveal">
@@ -381,7 +381,7 @@
           </div>
           <div class="lab-limit">
             <span class="lab-k">Verified 2026-09-09</span>
-            <p><b>Not proven:</b> one service on one arm64 machine. Pull time is measured as compressed bytes, not seconds, and no cluster or image scanner was involved.</p>
+            <p><b>Environment:</b> Podman 5.7.1 on arm64 macOS, Go 1.24, distroless static, Alpine 3.20, and a local registry:2.</p>
           </div>
         </li>
         <li class="lab reveal">
@@ -392,7 +392,7 @@
           </div>
           <div class="lab-limit">
             <span class="lab-k">Verified 2026-10-17</span>
-            <p><b>Not proven:</b> clustering, HA fencing, live migration, ZFS, and Ceph, which need more nodes. The network was a NAT bridge, so VLAN and L2 behaviour is untested.</p>
+            <p><b>Environment:</b> AWS a1.metal (16 vCPU, 31 GiB, Graviton, us-east-1), Debian 13 arm64, Proxmox VE 9.2.20, Terraform 1.15.7 with the aws provider 6.69.1.</p>
           </div>
         </li>
     </ol>
