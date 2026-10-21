@@ -326,7 +326,7 @@
   <div class="wrap">
     <h2 class="h2">Hands-on labs</h2>
     <p class="book-sub">Measured results, with the environment recorded</p>
-    <p class="section-lede">Labs I run and write up, 58 verified since August. Each one records the exact versions and environment it ran on and the day it was verified. These are lab results, not production claims.</p>
+    <p class="section-lede">Labs I run and write up, 58 verified since August. The six below ran on real systems, not simulations: a real macOS machine, or real AWS infrastructure built with Terraform. Each records the exact versions it ran on and the day it was verified. These are lab results, not production claims.</p>
 
     <ol class="labs">
         <li class="lab reveal">
@@ -336,8 +336,8 @@
             <p>From bare Ubuntu to a verified workload. Three nodes were Ready and every pod Running, yet each calico-node sat at 0/1. Two blocked ports (179 and 5473) were the cause, and the one node without a local Typha replica looked like a broken machine rather than a firewall problem. A missing conntrack package had already stopped <code>kubeadm init</code> outright.</p>
           </div>
           <div class="lab-limit">
-            <span class="lab-k">Verified 2026-08-08</span>
-            <p><b>Environment:</b> Ubuntu 24.04 LTS, Kubernetes 1.31.14 (kubeadm), containerd 2.2.1, Calico 3.28.2, on three AWS EC2 t3.medium instances.</p>
+            <span class="lab-k">Verified 2026-08-08 on AWS</span>
+            <p><b>Environment:</b> Ubuntu 24.04 LTS, Kubernetes 1.31.14 (kubeadm), containerd 2.2.1, Calico 3.28.2, on three AWS EC2 t3.medium instances built with Terraform (<a href="https://github.com/jeonck/terraform-aws-lab/tree/main/lab20-onprem-k8s-verify" target="_blank" rel="noopener">lab20</a>).</p>
           </div>
         </li>
         <li class="lab reveal">
@@ -347,8 +347,8 @@
             <p>CI builds and pushes an image, writes the new tag to a GitOps repository, and stops. Argo CD does the deploying. The proof that a deploy worked is the running pod's image digest, not a green pipeline.</p>
           </div>
           <div class="lab-limit">
-            <span class="lab-k">Verified 2026-08-18</span>
-            <p><b>Environment:</b> GitLab 17.x with a Kubernetes-executor Runner, Argo CD, and kubeadm 1.31 with Calico, on two AWS EC2 instances standing in for on-prem. FastAPI 0.141.1, Podman 5.7.1.</p>
+            <span class="lab-k">Verified 2026-08-18 on AWS</span>
+            <p><b>Environment:</b> GitLab 17.x with a Kubernetes-executor Runner, Argo CD, and kubeadm 1.31 with Calico, on two AWS EC2 instances built with Terraform (<a href="https://github.com/jeonck/terraform-aws-lab/tree/main/lab21-gitlab-argocd-verify" target="_blank" rel="noopener">lab21</a>), standing in for on-prem. FastAPI 0.141.1, Podman 5.7.1.</p>
           </div>
         </li>
         <li class="lab reveal">
@@ -358,7 +358,7 @@
             <p>Import and lock contention, rehearsed against three backends in one terminal. On S3 the lock is one conditional PUT. Garage ignores that header, so <code>use_lockfile</code> gives you a lock that never refuses anyone.</p>
           </div>
           <div class="lab-limit">
-            <span class="lab-k">Verified 2026-08-17</span>
+            <span class="lab-k">Verified 2026-08-17 on macOS</span>
             <p><b>Environment:</b> Terraform 1.15.7 on macOS arm64, against three local backends: an http backend, an S3 stub, and Garage 2.3.0 in Podman.</p>
           </div>
         </li>
@@ -369,8 +369,8 @@
             <p>A 99.5% SLO as Prometheus recording rules, with multi-window burn-rate alerts through Alertmanager. The 5m SLI moved to 49.5% and paged in two minutes while the slow-burn alert stayed pending. A healthy service recorded no SLI at all until <code>or vector(0)</code> was added.</p>
           </div>
           <div class="lab-limit">
-            <span class="lab-k">Verified 2026-08-24</span>
-            <p><b>Environment:</b> Prometheus 3.14.0, Alertmanager 0.28.1, prometheus-client 0.26.0, FastAPI 0.141.1, Podman 5.7.1 with docker-compose, on macOS.</p>
+            <span class="lab-k">Verified 2026-08-24 on macOS</span>
+            <p><b>Environment:</b> Prometheus 3.14.0, Alertmanager 0.28.1, prometheus-client 0.26.0, FastAPI 0.141.1, Podman 5.7.1 with docker-compose.</p>
           </div>
         </li>
         <li class="lab reveal">
@@ -380,7 +380,7 @@
             <p>One Go service built five ways, from 1.03 GB down to 8.37 MB on scratch. The smallest image passes its health check and silently cannot make an HTTPS call or read a timezone. Fixing that costs under 2 MB, and pull time follows the 351 MB compressed transfer rather than the size on disk.</p>
           </div>
           <div class="lab-limit">
-            <span class="lab-k">Verified 2026-09-09</span>
+            <span class="lab-k">Verified 2026-09-09 on macOS</span>
             <p><b>Environment:</b> Podman 5.7.1 on arm64 macOS, Go 1.24, distroless static, Alpine 3.20, and a local registry:2.</p>
           </div>
         </li>
@@ -391,7 +391,7 @@
             <p>Terraform brought up an a1.metal host, Proxmox VE 9.2 installed on Debian, and a cloud-init template cloned three KVM-accelerated nodes. The snapshot loop reported plausible millisecond timings while doing nothing, because disks imported onto directory storage are raw.</p>
           </div>
           <div class="lab-limit">
-            <span class="lab-k">Verified 2026-10-17</span>
+            <span class="lab-k">Verified 2026-10-17 on AWS</span>
             <p><b>Environment:</b> AWS a1.metal (16 vCPU, 31 GiB, Graviton, us-east-1), Debian 13 arm64, Proxmox VE 9.2.20, Terraform 1.15.7 with the aws provider 6.69.1.</p>
           </div>
         </li>
