@@ -69,6 +69,7 @@
       <a href="#work">Work</a>
       <a href="#oss">Open source</a>
       <a href="#knowledge">Knowledge</a>
+      <a href="#labs">Labs</a>
       <a href="#platforms">Platforms</a>
       <a href="#experience">Experience</a>
       <a href="#stack">Stack</a>
@@ -317,6 +318,91 @@
     </ul>
 
     <p class="kb-note">The notes are worked examples of well-documented failure modes, not client engagements. The format, taxonomy, and masking rules are the part meant to be reused.</p>
+  </div>
+</section>
+
+<!-- 3d. HANDS-ON LABS : measured results, with the limits written next to them -->
+<section class="section" id="labs">
+  <div class="wrap">
+    <h2 class="h2">Hands-on labs</h2>
+    <p class="book-sub">Measured results, with the limits written down</p>
+    <p class="section-lede">Labs I run and write up, 58 verified since August. Each records the versions it ran on and the day it was verified, and where a lab could not prove something, the document says so. These are lab results, not production claims.</p>
+
+    <ol class="labs">
+        <li class="lab reveal">
+          <div class="lab-num"><span>0/1</span><small>on every calico-node, in a cluster that looked finished</small></div>
+          <div class="lab-main">
+            <h3><a href="https://handson.metacog.co.kr/#/note/01-install~onprem-3node-kubeadm-ubuntu" target="_blank" rel="noopener">Three-node Kubernetes with kubeadm</a></h3>
+            <p>From bare Ubuntu to a verified workload. Three nodes were Ready and every pod Running, yet each calico-node sat at 0/1. Two blocked ports (179 and 5473) were the cause, and the one node without a local Typha replica looked like a broken machine rather than a firewall problem. A missing conntrack package had already stopped <code>kubeadm init</code> outright.</p>
+          </div>
+          <div class="lab-limit">
+            <span class="lab-k">Verified 2026-08-08</span>
+            <p><b>Not proven:</b> ran on three EC2 t3.medium instances, not bare metal. Real NIC and driver behaviour, swap, product_uuid collisions, and ufw rules.</p>
+          </div>
+        </li>
+        <li class="lab reveal">
+          <div class="lab-num"><span>0</span><small>kubeconfigs held by the pipeline</small></div>
+          <div class="lab-main">
+            <h3><a href="https://handson.metacog.co.kr/#/note/01-install~gitlab-ci-argocd-fastapi-onprem" target="_blank" rel="noopener">GitOps delivery, GitLab CI to Argo CD</a></h3>
+            <p>CI builds and pushes an image, writes the new tag to a GitOps repository, and stops. Argo CD does the deploying. The proof that a deploy worked is the running pod's image digest, not a green pipeline.</p>
+          </div>
+          <div class="lab-limit">
+            <span class="lab-k">Verified 2026-08-18</span>
+            <p><b>Not proven:</b> two EC2 instances stood in for on-prem, single-node rather than three, with a plain HTTP registry. cert-manager registry TLS and real multi-node scheduling.</p>
+          </div>
+        </li>
+        <li class="lab reveal">
+          <div class="lab-num"><span>1 PUT</span><small>is the entire S3 lock</small></div>
+          <div class="lab-main">
+            <h3><a href="https://handson.metacog.co.kr/#/note/02-runbook~terraform-remote-backend-lock-import" target="_blank" rel="noopener">Terraform remote state locking</a></h3>
+            <p>Import and lock contention, rehearsed against three backends in one terminal. On S3 the lock is one conditional PUT. Garage ignores that header, so <code>use_lockfile</code> gives you a lock that never refuses anyone.</p>
+          </div>
+          <div class="lab-limit">
+            <span class="lab-k">Verified 2026-08-17</span>
+            <p><b>Not proven:</b> AWS itself (IAM, versioning, real S3 semantics) and the DynamoDB lock table most setups still use.</p>
+          </div>
+        </li>
+        <li class="lab reveal">
+          <div class="lab-num"><span>2 min</span><small>to page at 50% injected errors</small></div>
+          <div class="lab-main">
+            <h3><a href="https://handson.metacog.co.kr/#/note/01-install~slo-error-budget-burn-rate" target="_blank" rel="noopener">SLO burn-rate alerting</a></h3>
+            <p>A 99.5% SLO as Prometheus recording rules, with multi-window burn-rate alerts through Alertmanager. The 5m SLI moved to 49.5% and paged in two minutes while the slow-burn alert stayed pending. A healthy service recorded no SLI at all until <code>or vector(0)</code> was added.</p>
+          </div>
+          <div class="lab-limit">
+            <span class="lab-k">Verified 2026-08-24</span>
+            <p><b>Not proven:</b> a real 28-day budget, since every long window returned identical values on under 30 minutes of history. Alert routing, silences, and on-call escalation.</p>
+          </div>
+        </li>
+        <li class="lab reveal">
+          <div class="lab-num"><span>123×</span><small>smaller image, and two endpoints broke</small></div>
+          <div class="lab-main">
+            <h3><a href="https://handson.metacog.co.kr/#/note/01-install~container-image-size-and-what-breaks" target="_blank" rel="noopener">Container image size</a></h3>
+            <p>One Go service built five ways, from 1.03 GB down to 8.37 MB on scratch. The smallest image passes its health check and silently cannot make an HTTPS call or read a timezone. Fixing that costs under 2 MB, and pull time follows the 351 MB compressed transfer rather than the size on disk.</p>
+          </div>
+          <div class="lab-limit">
+            <span class="lab-k">Verified 2026-09-09</span>
+            <p><b>Not proven:</b> one service on one arm64 machine. Pull time is measured as compressed bytes, not seconds, and no cluster or image scanner was involved.</p>
+          </div>
+        </li>
+        <li class="lab reveal">
+          <div class="lab-num"><span>$0.29</span><small>for 42 minutes of bare metal</small></div>
+          <div class="lab-main">
+            <h3><a href="https://handson.metacog.co.kr/#/note/01-install~proxmox-on-ec2-bare-metal" target="_blank" rel="noopener">Proxmox on rented bare metal</a></h3>
+            <p>Terraform brought up an a1.metal host, Proxmox VE 9.2 installed on Debian, and a cloud-init template cloned three KVM-accelerated nodes. The snapshot loop reported plausible millisecond timings while doing nothing, because disks imported onto directory storage are raw.</p>
+          </div>
+          <div class="lab-limit">
+            <span class="lab-k">Verified 2026-10-17</span>
+            <p><b>Not proven:</b> clustering, HA fencing, live migration, ZFS, and Ceph, which need more nodes. The network was a NAT bridge, so VLAN and L2 behaviour is untested.</p>
+          </div>
+        </li>
+    </ol>
+
+    <p class="also">Also documented: <a href="https://handson.metacog.co.kr/#/note/01-install~argo-rollouts-canary-kind" target="_blank" rel="noopener">Argo Rollouts canary and rollback</a>, <a href="https://handson.metacog.co.kr/#/note/01-install~crossplane-cloud-resources-as-crds" target="_blank" rel="noopener">Crossplane</a>, <a href="https://handson.metacog.co.kr/#/note/01-install~vault-secrets-rotation" target="_blank" rel="noopener">Vault rotation</a>, <a href="https://handson.metacog.co.kr/#/note/01-install~pulumi-kubernetes-outputs-and-drift" target="_blank" rel="noopener">Pulumi drift</a>, <a href="https://handson.metacog.co.kr/#/note/01-install~opentelemetry-tracing-two-services" target="_blank" rel="noopener">OpenTelemetry tracing</a>, <a href="https://handson.metacog.co.kr/#/note/01-install~prometheus-instrument-and-query" target="_blank" rel="noopener">Prometheus queries</a>, <a href="https://handson.metacog.co.kr/#/note/01-install~ingress-nginx-onprem" target="_blank" rel="noopener">ingress-nginx</a>, and <a href="https://handson.metacog.co.kr/#/note/02-runbook~terraform-state-operations" target="_blank" rel="noopener">Terraform state operations</a>.</p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://handson.metacog.co.kr/" target="_blank" rel="noopener">Browse all labs</a>
+      <a class="btn btn-ghost" href="https://github.com/jeonck/handson" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
   </div>
 </section>
 

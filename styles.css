@@ -107,6 +107,11 @@ a{color:inherit}
 .nav-cta:hover{border-color:var(--accent); background:var(--accent-soft)}
 .nav-resume{color:var(--text) !important; font-weight:500}
 .nav-resume:hover{color:var(--accent) !important}
+/* Ten items need less air between 961 and 1180px, or the last one reaches the viewport edge. */
+@media (max-width:1180px){
+  .nav-links{gap:17px; font-size:14px}
+  .nav-cta{padding:6px 12px}
+}
 /* Section anchors collapse on small screens, but Resume and contact are the two
    actions a recruiter came for, so both survive down to the narrowest viewport. */
 @media (max-width:960px){
@@ -243,6 +248,25 @@ h1{
 .kb-examples a:hover{text-decoration-color:var(--accent)}
 .kb-examples span{color:var(--muted); font-size:14.8px}
 .kb-note{margin:30px 0 0; max-width:72ch; color:var(--muted); font-size:14.8px; padding-left:16px; border-left:2px solid var(--line)}
+
+/* ---------- hands-on labs ---------- */
+.labs{list-style:none; margin:34px 0 0; padding:0}
+.lab{display:grid; gap:16px 40px; grid-template-columns:1fr; padding:30px 0; border-top:1px solid var(--line-soft)}
+.lab:first-child{border-top:1px solid var(--line)}
+@media (min-width:920px){ .lab{grid-template-columns:172px 1.4fr 1fr; align-items:start} }
+.lab-num span{
+  display:block; font-family:"Geist Mono",ui-monospace,monospace;
+  font-size:clamp(1.8rem,3vw,2.2rem); font-weight:500; letter-spacing:-.03em; line-height:1.1; color:var(--accent);
+}
+.lab-num small{display:block; margin-top:9px; max-width:22ch; font-size:13px; line-height:1.45; color:var(--muted)}
+.lab-main h3{margin:0 0 10px; font-size:1.1rem; letter-spacing:-.016em; font-weight:600}
+.lab-main h3 a{text-decoration:none}
+.lab-main h3 a:hover{color:var(--accent)}
+.lab-main p{margin:0; color:var(--muted); font-size:15.2px}
+.lab code{font-family:"Geist Mono",ui-monospace,monospace; font-size:.88em; color:var(--text)}
+.lab-k{display:block; margin-bottom:8px; font-family:"Geist Mono",ui-monospace,monospace; font-size:12px; color:var(--muted)}
+.lab-limit p{margin:0; padding-left:14px; border-left:2px solid var(--line); color:var(--muted); font-size:14.2px}
+.lab-limit b{color:var(--text); font-weight:500}
 
 /* ---------- selected work ---------- */
 .feature{
